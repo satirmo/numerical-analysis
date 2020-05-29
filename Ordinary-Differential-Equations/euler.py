@@ -26,7 +26,7 @@ def euler(t0, y0, f, upper_bound, points):
         f (function): A function defined in terms of t and y. This function
             must return a scalar.
         upper_bound (float): The maximum value of t that will plotted.
-        points (float): The number of points that will be plotted.
+        points (int): The number of points that will be plotted.
 
     Returns:
         None
