@@ -1,4 +1,4 @@
-function [x] = calculate_stability_test()
+function [] = calculate_stability_test()
     test_case_count = 4;
 
     test_matrices = cell(test_case_count, 1);
