@@ -1,13 +1,13 @@
-function [verdict] = calculate_stability(A)
+function [result] = calculate_stability(A)
     eigenvals = eig(A);
-    verdict = "";
+    result = "";
 
     if is_unstable(eigenvals)
-        verdict = "unstable";
+        result = "unstable";
     elseif is_asymptotically_stable(eigenvals)
-        verdict = "asymptotically stable";
+        result = "asymptotically stable";
     elseif is_stable(eigenvals)
-        verdict = "stable";
+        result = "stable";
     end
 end
 
