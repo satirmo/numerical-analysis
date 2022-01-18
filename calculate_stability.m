@@ -1,5 +1,5 @@
-function [result] = calculate_stability(A)
-    eigenvals = eig(A);
+function [result] = calculate_stability(system_matrix)
+    eigenvals = eig(system_matrix);
     result = "";
 
     if is_unstable(eigenvals)
