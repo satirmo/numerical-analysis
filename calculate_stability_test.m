@@ -7,7 +7,7 @@ function [] = calculate_stability_test()
     test_matrices{3} = [-1, 10; 0, -2];
     test_matrices{4} = [0, -1; 5, 0];
 
-    expected = ["unstable", "asymptotically stable", "asymptotically stable", "stable"];
+    expected = ["unstable", "unstable", "asymptotically stable", "stable"];
 
     for k = 1 : test_case_count
         if expected(k) == calculate_stability(test_matrices{k})
