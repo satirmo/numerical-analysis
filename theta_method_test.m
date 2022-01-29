@@ -46,15 +46,15 @@ function [] = simulate_system_2()
 end
 
 function [] = plot_test_case_results(system_id, test_case_id, points, timesteps, timestep_size, theta)
-    title_phase_portrait = sprintf("y_1 vs. y_2 (h = %.2f, theta = %.2f)", timestep_size, theta);
+    title_phase_portrait = sprintf("y_1 vs. y_2 (h = %.3f, theta = %.1f)", timestep_size, theta);
     file_name_phase_portrait = sprintf("phase_portrait_%03d_%03d.png", system_id, test_case_id);
     plot_phase_portrait(points, title_phase_portrait, file_name_phase_portrait);
 
-    title_y1_vs_t = sprintf("y_1 vs. t (h = %.2f, theta = %.2f)", timestep_size, theta);
+    title_y1_vs_t = sprintf("y_1 vs. t (h = %.3f, theta = %.1f)", timestep_size, theta);
     file_name_y1_vs_t = sprintf("y1_vs_t_%03d_%03d.png", system_id, test_case_id);
     plot_y_vs_time(points, 1, timesteps, title_y1_vs_t, file_name_y1_vs_t);
 
-    title_y2_vs_t = sprintf("y_2 vs. t (h = %.2f, theta = %.2f)", timestep_size, theta);
+    title_y2_vs_t = sprintf("y_2 vs. t (h = %.3f, theta = %.1f)", timestep_size, theta);
     file_name_y2_vs_t = sprintf("y2_vs_t_%03d_%03d.png", system_id, test_case_id);
     plot_y_vs_time(points, 2, timesteps, title_y2_vs_t, file_name_y2_vs_t);
 end
