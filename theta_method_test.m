@@ -30,7 +30,7 @@ function [] = simulate_system_2()
     thetas = [0, 0, 0.5, 0.5, 1.0, 1.0];
     y_init = [10; 10];
     time_interval = [0, 100];
-    timestep_sizes = [0.1, 0.001, 0.1, 0.001, 0.1, 0.001];
+    timestep_sizes = [0.001, 0.1, 0.001, 0.1, 0.001, 0.1];
     
     f = @(t, y) [0.25, 0; 0, -1]*y + 0.01*y(1)*y(2)*[-1; 1];
     f_jacobian = @(t, y) [-1, 0; 0, -100];
